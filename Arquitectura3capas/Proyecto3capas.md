@@ -1,33 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Implementación de Infraestructura de 3 capas en AWS
 
 ## 🌍 Roles
