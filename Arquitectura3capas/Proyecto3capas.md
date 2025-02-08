@@ -80,12 +80,15 @@ El objetivo de este proyecto fue implementar una infraestructura segura y de alt
      - **Database Server:** Restringido solo al App Server.
 
 *Listado de instancias:*
+
 ![alt text](/Arquitectura3capas//img/image-4.png)
 
 *Listado de grupos de seguridad:*
+
 ![alt text](/Arquitectura3capas//img/image-5.png)
 
  *Tabla de ruteo:*
+
 ![alt text](/Arquitectura3capas/img/image.png)
   
 
@@ -130,6 +133,7 @@ El objetivo de este proyecto fue implementar una infraestructura segura y de alt
    mysql –user=root -password=********* –host=endpoint-base-de-datos
    ```` 
    *Verificamos conección a la base de datos:*
+   
    ![alt text](/Arquitectura3capas//img/image-3.png)
 
 ## 📌 Conclusión
