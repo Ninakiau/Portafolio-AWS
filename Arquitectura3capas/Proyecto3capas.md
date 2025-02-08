@@ -116,7 +116,8 @@ El objetivo de este proyecto fue implementar una infraestructura segura y de alt
    - Uso de User Data para instalar paquetes automáticamente en el Web Server.
    - Carga de claves SSH en el Bastion Host para acceso seguro.
 
-     *Hacemos ping desde Bastion Host para verificar la conexión:*
+   *Hacemos ping desde Bastion Host para verificar la conexión:*
+
    ![alt text](/Arquitectura3capas//img/image-2.png)
  
 
@@ -133,7 +134,7 @@ El objetivo de este proyecto fue implementar una infraestructura segura y de alt
    mysql –user=root -password=********* –host=endpoint-base-de-datos
    ```` 
    *Verificamos conección a la base de datos:*
-   
+
    ![alt text](/Arquitectura3capas//img/image-3.png)
 
 ## 📌 Conclusión
