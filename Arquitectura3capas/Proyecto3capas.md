@@ -31,7 +31,7 @@
 # Implementación de Infraestructura de 3 capas en AWS
 
 ## 🌍 Roles
-Administrador cloud:  diseño y despliegue de una infraestructura tolerante a fallos y segura en AWS, asegurando alta disponibilidad y segregación de recursos mediante VPC, subnets y servicios de conectividad.
+Administrador cloud: despliegue de una infraestructura tolerante a fallos y segura en AWS, asegurando alta disponibilidad y segregación de recursos mediante VPC, subnets y servicios de conectividad.
 
 ## 🏛️ Arquitectura de 3 Capas
 ![alt text](/Arquitectura3capas/img/image-7.png)
@@ -90,54 +90,92 @@ El objetivo de este proyecto fue implementar una infraestructura segura y de alt
  *Tabla de ruteo:*
 
 ![alt text](/Arquitectura3capas/img/image.png)
-  
 
 
-3. **Implementación de Servidores (EC2 & RDS):**  
+   3. **Implementación de Servidores (EC2 & RDS):**  
+
    - Creación de un Bastion Host en la subnet pública para acceso seguro.
+
    - Instalación y configuración de Apache y PHP en el Web Server.
+
    ````bash
+
     #!/bin/bash
+
     sudo yum update -y
+
     sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+
     sudo yum install -y httpd
+
     sudo systemctl start httpd 
+
     sudo systemctl enable httpd
-    ````
+
+   ````
+
+
    - Configuración de un App Server con MariaDB para la capa lógica de la aplicación.
-   ```` 
+
+   ```` bash
+
    #!/bin/bash
+
     sudo yum install -y mariadb-server
+
     sudo service mariadb start 
+
    ```` 
+
    - Creación de una instancia RDS con MariaDB restringida al App Server.
+
    
+
 4. **Automatización y Configuración:**  
+
    - Uso de User Data para instalar paquetes automáticamente en el Web Server.
+
    - Carga de claves SSH en el Bastion Host para acceso seguro.
 
-   *Hacemos ping desde Bastion Host para verificar la conexión:*
+
+
+     *Hacemos ping desde Bastion Host para verificar la conexión:*
 
    ![alt text](/Arquitectura3capas//img/image-2.png)
+
  
 
+
+
    ````bash
+
    #Subir claves SSH en Bastion Host:
+
    scp -i "C:\Users\user\Downloads\labsuser.pem" "C:\Users\user\Downloads\labsuser.pem" ec2-user@ip-pública-bastionHost:/home/ec2-user/
 
+
+
    #Conectarse al App Server desde Bastion Host:
+
    ssh -i labsuser.pem ec2-user@ip-privada-app-server
-   ````
-   - Configuración de conexiones remotas a la base de datos usando credenciales seguras.
 
    ````
+
+   - Configuración de conexiones remotas a la base de datos usando credenciales seguras.
+
+
+
+   ````
+
    mysql –user=root -password=********* –host=endpoint-base-de-datos
+
    ```` 
+
    *Verificamos conección a la base de datos:*
 
    ![alt text](/Arquitectura3capas//img/image-3.png)
 
 ## 📌 Conclusión
-Este proyecto demostró la importancia de una arquitectura bien segmentada en AWS, permitiendo una infraestructura segura y escalable. La combinación de subnets privadas, un Bastion Host para administración, y bases de datos restringidas dentro de un grupo de subnets proporciona un entorno robusto y resiliente ante fallos. La implementación de Security Groups y NAT Gateway garantiza la seguridad y el acceso controlado a los recursos, permitiendo la operación eficiente de la aplicación en la nube.
+Este proyecto demuestra cómo una arquitectura en la nube bien segmentada y automatizada en AWS puede transformar la infraestructura de una aplicación. La división en subnets públicas y privadas, junto con la implementación de un Bastion Host, permite un control preciso de los accesos y una administración segura. La integración de instancias EC2 para el procesamiento y Amazon RDS para la gestión de datos, combinada con herramientas de automatización y configuraciones de seguridad (Security Groups y NAT Gateway), crea un entorno robusto, escalable y resiliente. Este enfoque integral no solo garantiza la protección de los datos críticos, sino que también facilita la operación, el mantenimiento y la evolución futura de la infraestructura conforme a las demandas del negocio.
 
 
