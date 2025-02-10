@@ -147,6 +147,9 @@ El objetivo de este proyecto fue implementar una infraestructura segura y de alt
 
    ![alt text](/Arquitectura3capas//img/image-3.png)
 
+## Estimación de Costos
+
+
 ## 📌 Conclusión
 Este proyecto demuestra cómo una arquitectura en la nube bien segmentada y automatizada en AWS puede transformar la infraestructura de una aplicación. La división en subnets públicas y privadas, junto con la implementación de un Bastion Host, permite un control preciso de los accesos y una administración segura. La integración de instancias EC2 para el procesamiento y Amazon RDS para la gestión de datos, combinada con herramientas de automatización y configuraciones de seguridad (Security Groups y NAT Gateway), crea un entorno robusto, escalable y resiliente. Este enfoque integral no solo garantiza la protección de los datos críticos, sino que también facilita la operación, el mantenimiento y la evolución futura de la infraestructura conforme a las demandas del negocio.
 
