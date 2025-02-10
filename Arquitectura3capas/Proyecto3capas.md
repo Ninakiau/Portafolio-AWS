@@ -147,7 +147,7 @@ El objetivo de este proyecto fue implementar una infraestructura segura y de alt
 
    ![alt text](/Arquitectura3capas//img/image-3.png)
 
-## Estimación de Costos
+
 
 
 ## 📌 Conclusión
