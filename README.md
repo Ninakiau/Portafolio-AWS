@@ -65,6 +65,10 @@ Asegurar accesos con SSH y realizar pruebas de conectividad.
 📌 Contribuciones
 
 Este proyecto fue desarrollado por el equipo para mejorar habilidades en redes, seguridad y arquitectura en la nube.
+- [![LinkedIn](https://img.shields.io/badge/LinkedIn-Claudia-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/claudia-dev) [![GitHub](https://img.shields.io/badge/GitHub-Claudia-black?style=for-the-badge&logo=github)](https://github.com/Ninakiau)
+
+- [![LinkedIn](https://img.shields.io/badge/LinkedIn-Camilo-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/camilo-caceres-8b62a9337/) [![GitHub](https://img.shields.io/badge/GitHub-Camilo-black?style=for-the-badge&logo=github)](https://github.com/TravailZamilo)
+
 
 📜 Licencia
 
